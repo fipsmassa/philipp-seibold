@@ -13,10 +13,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - name: Install pnpm
+      - name: Install pnpm and dependencies
         uses: pnpm/action-setup@v2
-      - name: Install dependencies
-        run: pnpm install
+        with:
+          version: 8.2.0
+          run_install: true
       - name: Build app
         run: pnpm run build
       - name: Install SSH Key
