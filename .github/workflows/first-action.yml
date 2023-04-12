@@ -1,24 +1,24 @@
 name: first-action
-on: 
+on:
   push:
     branches:
-    - main
+      - main
 jobs:
   build-and-deploy-to-netcup:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node  
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Build app
         run: pnpm run build
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
-          key: {%- raw -%} ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: 'ssh-keyscan -H ${{ secrets.SSH_HOST }}{% endraw%} >> ~/.ssh/known_hosts'      
-      - name: Deploy with rsync      
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: "ssh-keyscan -H ${{ secrets.SSH_HOST }}{% endraw%} >> ~/.ssh/known_hosts"
+      - name: Deploy with rsync
         run: rsync -avz ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/httpdocs/
