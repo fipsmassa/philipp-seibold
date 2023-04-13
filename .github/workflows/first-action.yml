@@ -21,7 +21,7 @@ jobs:
       - name: Build app
         run: pnpm run build
       - name: copy files via ssh key
-        uses: appleboy/scp-action@v0.0.1
+        uses: appleboy/scp-action@0.1.4
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
