@@ -1,0 +1,33 @@
+.level {
+  display: inline-block;
+  width: 3em;
+  height: 1em;
+  border: 2px solid #bd96c5;
+  margin: 0 0.15em;
+}
+
+.level.filled {
+  background-color: #bd96c5;
+}
+
+.first {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+.last {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill_level {
+  margin-left: 0.5em;
+  display: flex;
+  justify-content: center;
+}

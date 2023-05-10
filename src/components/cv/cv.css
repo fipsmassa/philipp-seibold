@@ -1,0 +1,38 @@
+.cv {
+  background-color: #bd96c5;
+  color: white;
+  padding: 2em 0 4em;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: black;
+  margin: 1em 0 2em;
+}
+
+.salesmachine_logo {
+  padding: 0.5em;
+}
+
+.education_logo,
+.experience_logo {
+  padding-right: 2em;
+}
+
+.experience_inner,
+.education_inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.education_card {
+  width: 50%;
+  margin-right: 1em;
+}
+
+.experience_card {
+  width: 50%;
+  margin-left: 1em;
+}

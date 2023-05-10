@@ -1,14 +1,21 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { Header } from "./components/header/Header";
+import { Hero } from "./components/hero/Hero";
+import { Footer } from "./components/footer/Footer";
+import { Skills } from "./components/skills/Skills";
+import { Cv } from "./components/cv/Cv";
+import { Projects } from "./components/projects/Projects";
+import { Blog } from "./components/blog/Blog";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <p>wip</p>
+      <Header />
+      <Hero />
+      <Skills />
+      <Cv />
+      <Projects />
+      <Footer />
     </div>
   );
 }

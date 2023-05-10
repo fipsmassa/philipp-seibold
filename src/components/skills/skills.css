@@ -1,0 +1,16 @@
+.skills {
+  padding: 0 0 2em;
+}
+
+.skill_bar {
+  display: flex;
+  justify-content: center;
+}
+
+.skill_cards {
+  padding: 1em 0;
+}
+
+.heading_icon {
+  margin-left: 1em;
+}
