@@ -15,7 +15,7 @@ export const Cv = () => {
             <div className="education">
               <div className="education_inner">
                 <div className="education_logo">
-                  <img src="/src/assets/bachelor.png" width="50" />
+                  <img src="/assets/bachelor.png" width="50" />
                 </div>
                 <div className="education_text">
                   <p>Bachelor 2018-2021</p>
@@ -28,7 +28,7 @@ export const Cv = () => {
               </div>
               <div className="education_inner">
                 <div className="education_logo">
-                  <img src="/src/assets/apprentice.png" width="50" />
+                  <img src="/assets/apprentice.png" width="50" />
                 </div>
                 <div className="education_text">
                   <p>Apprenticeship 2015-2018</p>
@@ -44,7 +44,7 @@ export const Cv = () => {
               </div>
               <div className="education_inner">
                 <div className="education_logo">
-                  <img src="/src/assets/experience.png" width="50" />
+                  <img src="/assets/experience.png" width="50" />
                 </div>
                 <div className="education_text">
                   <p>Study 2014-2015</p>
@@ -59,7 +59,7 @@ export const Cv = () => {
               </div>
               <div className="education_inner">
                 <div className="education_logo">
-                  <img src="/src/assets/hospital.png" width="50" />
+                  <img src="/assets/hospital.png" width="50" />
                 </div>
                 <div className="education_text">
                   <p>Social Year 2013-2014</p>
@@ -68,7 +68,7 @@ export const Cv = () => {
               </div>
               <div className="education_inner">
                 <div className="education_logo">
-                  <img src="/src/assets/school.png" width="50" />
+                  <img src="/assets/school.png" width="50" />
                 </div>
                 <div className="education_text">
                   <p>School 2005-2013</p>
@@ -91,7 +91,7 @@ export const Cv = () => {
             <div className="experience">
               <div className="experience_inner">
                 <div className="experience_logo">
-                  <img src="/src/assets/s_payment.jpg" width="100" />
+                  <img src="/assets/s_payment.jpg" width="100" />
                 </div>
                 <div className="experience_text">
                   <p>Software Developer 2021-current @ S-Payment GmbH</p>
@@ -106,7 +106,7 @@ export const Cv = () => {
               </div>
               <div className="experience_inner">
                 <div className="experience_logo">
-                  <img src="/src/assets/dsv.png" width="100" />
+                  <img src="/assets/dsv.png" width="100" />
                 </div>
                 <div className="experience_text">
                   <p>
@@ -126,7 +126,7 @@ export const Cv = () => {
               <div className="experience_inner">
                 <div className="experience_logo">
                   <img
-                    src="/src/assets/salesmachine_logo.svg"
+                    src="/assets/salesmachine_logo.svg"
                     width="84"
                     className="dark_bg salesmachine_logo"
                   />

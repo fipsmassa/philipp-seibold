@@ -4,25 +4,24 @@
 
 .img {
   height: 15em;
-  width: 25em;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .img.svr {
-  background-image: url("/src/assets/referenz_svr.png");
+  background-image: url("/assets/referenz_svr.png");
 }
 
 .img.tfn {
-  background-image: url("/src/assets/referenz_tfn.png");
+  background-image: url("/assets/referenz_tfn.png");
 }
 
 .img.mfa {
-  background-image: url("/src/assets/referenz_mfa.png");
+  background-image: url("/assets/referenz_mfa.png");
 }
 
 .img_card {
   margin-top: 1em;
   width: 33.33%;
-  padding: 0.5em;
+  padding: 0 1em;
 }

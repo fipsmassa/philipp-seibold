@@ -10,7 +10,7 @@ export const Header = () => {
         <span className="logo">{"{ps}"}</span>
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           href="mailto:info@philipp-seibold.de"
           endIcon={<EmailIcon />}
         >

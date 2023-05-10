@@ -6,7 +6,7 @@ export const Hero = () => {
     <section className="hero">
       <div className="container wrapper">
         <div className="avatar">
-          <img src="/src/assets/avatar.png" width="250" />
+          <img src="/assets/avatar.png" width="250" />
         </div>
         <div className="intro">
           <h1>Hi, I'm Philipp, a passionate developer! </h1>
