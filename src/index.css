@@ -7,6 +7,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --main-color: #a3ffd6;
+  --secondary-color: #8576ff;
+  --third-color: #ffa387;
 }
 
 html,
@@ -14,4 +17,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+  background-color: #1b1b1b;
+  color: white;
 }

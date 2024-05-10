@@ -5,12 +5,14 @@ export const Hero = () => {
   return (
     <section className="hero">
       <div className="container wrapper">
-        <div className="avatar">
-          <img src="/assets/avatar.png" width="250" />
-        </div>
         <div className="intro">
-          <h1>Hi, I'm Philipp, a passionate developer! </h1>
+          <h1>Hi, I'm Philipp 👋 </h1>
+          <p>
+            I'm a frontend developer based in Stuttgart, Germany, specialized in
+            crafting web applications. Let's bring your digital dreams to life!
+          </p>
         </div>
+        <div className="avatar"></div>
       </div>
     </section>
   );

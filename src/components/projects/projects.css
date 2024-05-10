@@ -1,11 +1,12 @@
 .projects {
-  padding: 3em 0 5em;
+  padding-top: 1em;
 }
 
 .img {
   height: 15em;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .img.svr {

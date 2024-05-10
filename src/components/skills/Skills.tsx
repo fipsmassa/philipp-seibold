@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./skills.css";
-import { Skillbar } from "../lib/Skillbar";
+import { NewSkillbar, Skillbar } from "../lib/Skillbar";
 import Grid from "@mui/material/Grid";
 import ComputerIcon from "@mui/icons-material/Computer";
 import StorageIcon from "@mui/icons-material/Storage";
@@ -8,50 +8,51 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 
 export const Skills = () => {
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <div className="container">
-        <div className="skill_cards">
-          <h2 className="container_heading">My skills</h2>
-          <div className="card_wrap">
-            <div className="card">
-              <div className="card_heading">
-                <h3>Frontend</h3>
-                <ComputerIcon className="heading_icon" fontSize="large" />
-              </div>
-              <Skillbar name={"JavaScript"} level={5} />
-              <Skillbar name={"TypeScript"} level={4} />
-              <Skillbar name={"React"} level={4} />
-              <Skillbar name={"Redux"} level={3} />
-              <Skillbar name={"HTML"} level={5} />
-              <Skillbar name={"CSS"} level={4} />
-              <Skillbar name={"Angular"} level={2} />
-              <Skillbar name={"Vue"} level={2} />
+        <h2>My Skills</h2>
+        <div className="new_skills">
+          <div className="frontend custom_card">
+            <div className="card_heading">
+              <h3>Frontend</h3>
+              <ComputerIcon className="heading_icon" fontSize="large" />
             </div>
-            <div className="card">
-              <div className="card_heading">
-                <h3>Backend</h3>
-                <StorageIcon className="heading_icon" fontSize="large" />
-              </div>
-              <Skillbar name={"Java"} level={3} />
-              <Skillbar name={"Spring"} level={1} />
-              <Skillbar name={"PHP"} level={2} />
-              <Skillbar name={"Node.js"} level={2} />
-              <Skillbar name={"MongoDB"} level={2} />
-              <Skillbar name={"SQL"} level={2} />
+            <NewSkillbar name="JavaScript" progress={99} />
+            <NewSkillbar name="TypeScript" progress={99} />
+            <NewSkillbar name="React" progress={99} />
+            <NewSkillbar name="HTML" progress={99} />
+            <NewSkillbar name="CSS" progress={99} />
+            <NewSkillbar name="Angular" progress={25} />
+            <NewSkillbar name="Vue" progress={33} />
+            <NewSkillbar name="React Native" progress={33} />
+          </div>
+          <div className="frontend custom_card">
+            <div className="card_heading">
+              <h3>Backend</h3>
+              <StorageIcon className="heading_icon" fontSize="large" />
             </div>
-            <div className="card">
-              <div className="card_heading">
-                <h3>Misc</h3>
-                <InventoryIcon className="heading_icon" fontSize="large" />
-              </div>
-              <Skillbar name={"GIT"} level={4} />
-              <Skillbar name={"GitLab"} level={4} />
-              <Skillbar name={"IntelliJ"} level={4} />
-              <Skillbar name={"VS Code"} level={4} />
-              <Skillbar name={"Storybook"} level={3} />
-              <Skillbar name={"Motivation"} level={5} />
-              <Skillbar name={"Learning"} level={5} />
+            <NewSkillbar name="Java" progress={75} />
+            <NewSkillbar name="JUnit" progress={50} />
+            <NewSkillbar name="Spring" progress={50} />
+            <NewSkillbar name="PHP" progress={50} />
+            <NewSkillbar name="Node.js" progress={33} />
+            <NewSkillbar name="MongoDB" progress={33} />
+            <NewSkillbar name="SQL" progress={50} />
+            <NewSkillbar name="PostgreSQL" progress={33} />
+          </div>
+          <div className="frontend custom_card">
+            <div className="card_heading">
+              <h3>Misc</h3>
+              <InventoryIcon className="heading_icon" fontSize="large" />
             </div>
+            <NewSkillbar name="Git" progress={85} />
+            <NewSkillbar name="GitLab" progress={75} />
+            <NewSkillbar name="IntelliJ" progress={90} />
+            <NewSkillbar name="VSCode" progress={75} />
+            <NewSkillbar name="Storybook" progress={95} />
+            <NewSkillbar name="Jest" progress={80} />
+            <NewSkillbar name="Testing Library" progress={80} />
+            <NewSkillbar name="Cypress" progress={33} />
           </div>
         </div>
       </div>

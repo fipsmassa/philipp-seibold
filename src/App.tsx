@@ -15,6 +15,7 @@ function App() {
       <Skills />
       <Cv />
       <Projects />
+      <Blog />
       <Footer />
     </div>
   );

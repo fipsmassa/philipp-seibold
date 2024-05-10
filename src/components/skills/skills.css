@@ -1,5 +1,9 @@
 .skills {
-  padding: 0 0 2em;
+  padding-top: 1em;
+}
+
+h2 {
+  text-align: center;
 }
 
 .skill_bar {
@@ -12,5 +16,15 @@
 }
 
 .heading_icon {
-  margin-left: 1em;
+  margin-left: 0.5em;
+}
+
+.new_skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom_card {
+  width: 100%;
+  padding: 1em;
 }

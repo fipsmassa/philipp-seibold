@@ -34,7 +34,7 @@ export const Footer = () => {
         >
           Contact
         </Button>
-        <p>Handcrafted by me © 2023</p>
+        <p>Handcrafted by me © 2024</p>
       </div>
     </section>
   );

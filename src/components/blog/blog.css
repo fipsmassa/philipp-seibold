@@ -1,0 +1,15 @@
+.blog {
+  padding-top: 1em;
+}
+
+.blog_icon {
+  height: 250px !important;
+  width: 250px !important;
+}
+
+.blog_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

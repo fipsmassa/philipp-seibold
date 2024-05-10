@@ -1,7 +1,6 @@
 .cv {
-  background-color: #bd96c5;
   color: white;
-  padding: 2em 0 4em;
+  padding-top: 1em;
 }
 
 .card {
@@ -35,4 +34,70 @@
 .experience_card {
   width: 50%;
   margin-left: 1em;
+}
+
+.new_cv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education,
+.experience {
+  width: 50%;
+}
+
+.education {
+  margin-right: 1em;
+}
+
+.experience {
+  margin-left: 1em;
+}
+
+.cv h3 {
+  text-align: center;
+}
+
+.cv li {
+  padding-bottom: 2em;
+  position: relative;
+  list-style: none;
+}
+
+.cv li:last-of-type {
+  padding-bottom: 0.5em;
+}
+
+.cv li:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  left: -24px;
+  top: 5px;
+}
+
+.cv li:first-of-type:before {
+  border: 3px solid white;
+  background-color: var(--secondary-color);
+  left: -27px;
+  z-index: 98;
+}
+
+.cv li:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  display: block;
+  background-color: white;
+  left: -20px;
+  top: 5px;
+}
+
+.cv small {
+  display: block;
 }

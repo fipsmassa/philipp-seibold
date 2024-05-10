@@ -9,7 +9,7 @@ import "./projects.css";
 
 export const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="container">
         <h2 className="container_heading">Some Projects</h2>
         <div className="card_wrap">
@@ -19,7 +19,8 @@ export const Projects = () => {
               <h3>SV Remshalden Fußball</h3>
               <p>Wordpress website for local club. Scores and other news.</p>
               <Button
-                variant="outlined"
+                variant="contained"
+                color="secondary"
                 endIcon={<ArrowForwardIosIcon />}
                 href="https://www.svremshalden-fussball.de"
                 target="_blank"
@@ -36,7 +37,8 @@ export const Projects = () => {
                 Static website for local classic rock band, HTML and CSS only.
               </p>
               <Button
-                variant="outlined"
+                variant="contained"
+                color="secondary"
                 endIcon={<ArrowForwardIosIcon />}
                 href="https://www.takenfromnone.de"
                 target="_blank"
@@ -51,7 +53,8 @@ export const Projects = () => {
               <h3>Mittagstisch für alle</h3>
               <p>PHP based Website, information on public lunch table.</p>
               <Button
-                variant="outlined"
+                variant="contained"
+                color="secondary"
                 endIcon={<ArrowForwardIosIcon />}
                 href="https://mittagstisch-fuer-alle.de/index.php"
                 target="_blank"

@@ -1,5 +1,94 @@
+:root {
+  --shadow-color: #8576ff;
+  --shadow-color-light: white;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  color: white;
+  top: 0;
+  padding: 2em 0;
+  background-color: rgba(27 27 27 / 95%);
+}
+
 nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding-top: 3em;
+}
+
+.header.shrink {
+  border-bottom: 1px solid #8576ff;
+  padding: 1em 0;
+  transition: all 0.2s ease;
+  z-index: 99;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25em;
+}
+
+.header.shrink .navigation a {
+  font-size: 1em;
+}
+
+.navigation a:hover {
+  color: #8576ff;
+  cursor: pointer;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+      0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 5px var(--shadow-color-light),
+      0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color),
+      0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color),
+      0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 3px var(--shadow-color-light),
+      0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color),
+      0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color),
+      0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  animation: neon 3s infinite;
+}
+
+.header.shrink .logo {
+  font-size: 1.25em;
 }
