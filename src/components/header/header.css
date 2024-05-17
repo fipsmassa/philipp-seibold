@@ -12,17 +12,27 @@
   background-color: rgba(27 27 27 / 95%);
 }
 
+.header.shrink {
+  border-bottom: 1px solid #8576ff;
+  padding: 1em 0;
+  transition: all 0.2s ease;
+  z-index: 99;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header.shrink {
-  border-bottom: 1px solid #8576ff;
-  padding: 1em 0;
-  transition: all 0.2s ease;
-  z-index: 99;
+.logo {
+  font-size: 2rem;
+  color: white;
+  animation: neon 3s infinite;
+}
+
+.header.shrink .logo {
+  font-size: 1.25em;
 }
 
 .navigation {
@@ -83,12 +93,73 @@ nav {
   }
 }
 
-.logo {
-  font-size: 2rem;
-  color: white;
-  animation: neon 3s infinite;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .burger {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .burger:hover {
+    cursor: pointer;
+  }
+
+  .burger .bun {
+    width: 30px;
+    height: 3px;
+    display: block;
+    background-color: white;
+    position: relative;
+  }
+
+  .burger .bun:before {
+    content: "";
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    position: absolute;
+    top: -10px;
+  }
+
+  .burger .bun:after {
+    content: "";
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    position: absolute;
+    bottom: -10px;
+  }
+
+  .responsive-navigation.active .navigation {
+    display: block;
+  }
+
+  .responsive-navigation.inactive .navigation {
+    display: none;
+  }
 }
 
-.header.shrink .logo {
-  font-size: 1.25em;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

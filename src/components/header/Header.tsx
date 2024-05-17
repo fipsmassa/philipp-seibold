@@ -5,10 +5,11 @@ import EmailIcon from "@mui/icons-material/Email";
 
 export const Header = () => {
   const [shrinkNavbar, setShrinkNavbar] = useState(false);
+  const [responsiveNavActive, setResponsiveNavActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 25) {
         setShrinkNavbar(true);
       } else {
         setShrinkNavbar(false);
@@ -35,9 +36,16 @@ export const Header = () => {
     }
   };
 
+  const onBurgerClickHandler = () => {
+    setResponsiveNavActive(!responsiveNavActive);
+  };
+
   return (
     <section className={shrinkNavbar ? "header shrink" : "header"}>
       <nav className="container">
+        <div className="burger" onClick={onBurgerClickHandler}>
+          <span className="bun"></span>
+        </div>
         <span className="logo">{"<PS />"}</span>
         <ul className="navigation">
           <li>
@@ -63,6 +71,28 @@ export const Header = () => {
           Contact
         </Button>
       </nav>
+      <div
+        className={
+          responsiveNavActive
+            ? "responsive-navigation active"
+            : "responsive-navigatio inactive"
+        }
+      >
+        <ul className="navigation">
+          <li>
+            <a onClick={() => scrollToSection("skills")}>Skills</a>
+          </li>
+          <li>
+            <a onClick={() => scrollToSection("cv")}>CV</a>
+          </li>
+          <li>
+            <a onClick={() => scrollToSection("projects")}>Sample Projects</a>
+          </li>
+          <li>
+            <a onClick={() => scrollToSection("blog")}>Blog</a>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };
