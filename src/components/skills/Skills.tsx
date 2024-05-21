@@ -47,8 +47,8 @@ export const Skills = () => {
             </div>
             <NewSkillbar name="Git" progress={85} />
             <NewSkillbar name="GitLab" progress={75} />
-            <NewSkillbar name="IntelliJ" progress={90} />
-            <NewSkillbar name="VSCode" progress={75} />
+            <NewSkillbar name="Kubernetes" progress={33} />
+            <NewSkillbar name="Helm" progress={33} />
             <NewSkillbar name="Storybook" progress={95} />
             <NewSkillbar name="Jest" progress={80} />
             <NewSkillbar name="Testing Library" progress={80} />

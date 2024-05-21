@@ -24,6 +24,7 @@ export const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setResponsiveNavActive(false);
     const headerOffset = 50;
     const element = document.getElementById(id);
     if (element) {
@@ -43,55 +44,70 @@ export const Header = () => {
   return (
     <section className={shrinkNavbar ? "header shrink" : "header"}>
       <nav className="container">
-        <div className="burger" onClick={onBurgerClickHandler}>
-          <span className="bun"></span>
+        <div className="burger_wrapper">
+          <div
+            className={responsiveNavActive ? "burger active" : "burger"}
+            onClick={onBurgerClickHandler}
+          >
+            <span className="top_bun"></span>
+            <span className="patty"></span>
+            <span className="bottom_bun"></span>
+          </div>
         </div>
-        <span className="logo">{"<PS />"}</span>
-        <ul className="navigation">
-          <li>
-            <a onClick={() => scrollToSection("skills")}>Skills</a>
-          </li>
-          <li>
-            <a onClick={() => scrollToSection("cv")}>CV</a>
-          </li>
-          <li>
-            <a onClick={() => scrollToSection("projects")}>Sample Projects</a>
-          </li>
-          <li>
-            <a onClick={() => scrollToSection("blog")}>Blog</a>
-          </li>
-        </ul>
-        <Button
-          variant="contained"
-          color="secondary"
-          href="mailto:info@philipp-seibold.de"
-          size={shrinkNavbar ? "small" : "large"}
-          endIcon={<EmailIcon />}
-        >
-          Contact
-        </Button>
+        <div className="logo_wrapper">
+          <span className="logo">{"<PS />"}</span>
+        </div>
+        <div className="navigation_wrapper">
+          <ul className="navigation desktop-navigation">
+            <li>
+              <a onClick={() => scrollToSection("skills")}>Skills</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("cv")}>CV</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("projects")}>Sample Projects</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("blog")}>Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div className="contact_wrapper">
+          <Button
+            variant="contained"
+            color="secondary"
+            href="mailto:info@philipp-seibold.de"
+            size={shrinkNavbar ? "small" : "large"}
+            endIcon={<EmailIcon />}
+          >
+            Contact
+          </Button>
+        </div>
       </nav>
       <div
         className={
           responsiveNavActive
             ? "responsive-navigation active"
-            : "responsive-navigatio inactive"
+            : "responsive-navigation"
         }
       >
-        <ul className="navigation">
-          <li>
-            <a onClick={() => scrollToSection("skills")}>Skills</a>
-          </li>
-          <li>
-            <a onClick={() => scrollToSection("cv")}>CV</a>
-          </li>
-          <li>
-            <a onClick={() => scrollToSection("projects")}>Sample Projects</a>
-          </li>
-          <li>
-            <a onClick={() => scrollToSection("blog")}>Blog</a>
-          </li>
-        </ul>
+        <div className="container">
+          <ul className="navigation">
+            <li>
+              <a onClick={() => scrollToSection("skills")}>Skills</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("cv")}>CV</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("projects")}>Sample Projects</a>
+            </li>
+            <li>
+              <a onClick={() => scrollToSection("blog")}>Blog</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );

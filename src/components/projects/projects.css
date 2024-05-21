@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(100%);
+  background-position: center;
 }
 
 .img.svr {
@@ -21,8 +22,35 @@
   background-image: url("/assets/referenz_mfa.png");
 }
 
-.img_card {
-  margin-top: 1em;
-  width: 33.33%;
-  padding: 0 1em;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  .projects .card_wrap {
+    flex-direction: column;
+  }
+
+  .img_card {
+    margin: 1em 0 2em;
+    padding: 0 1em;
+  }
+
+  .img_card:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .img_card {
+    width: 33.33%;
+    margin: 1em 0 2em;
+    padding: 0 1em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
