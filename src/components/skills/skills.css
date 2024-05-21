@@ -24,6 +24,11 @@ h2 {
   justify-content: space-between;
 }
 
+.progress_tag {
+  position: relative;
+  z-index: 97;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .new_skills {
