@@ -1,3 +1,21 @@
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-7deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .blog {
   padding-top: 1em;
 }
@@ -5,6 +23,15 @@
 .blog_icon {
   height: 250px !important;
   width: 250px !important;
+  color: #8576ff;
+  display: inline-block; /* Ensures the transform works */
+  transition: transform 0.2s ease;
+  animation: wiggle 1.5s ease-in-out infinite;
+}
+
+.blog_icon:hover {
+  cursor: pointer;
+  transform: scale(1.25);
 }
 
 .blog_content {
